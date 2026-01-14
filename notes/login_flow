@@ -1,0 +1,13 @@
+The Login Workflow
+
+Flattrade’s login is a bit unique. You don't just send a password; you need to generate a request_token via a browser first.
+
+The Flow:
+
+    Open URL: https://auth.flattrade.in/?app_key=YOUR_API_KEY in your browser.
+
+    Login: Enter your UCC, Password, and TOTP.
+
+    Redirect: It will redirect to your URL with a code: https://yourredirect.com/?request_code=XXXXXX.
+
+    Exchange: Your Go app will take that request_code and exchange it for a permanent token for the day.
