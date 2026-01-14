@@ -11,3 +11,6 @@ The Flow:
     Redirect: It will redirect to your URL with a code: https://yourredirect.com/?request_code=XXXXXX.
 
     Exchange: Your Go app will take that request_code and exchange it for a permanent token for the day.
+
+
+Flattrade’s WebSocket requires a "Heartbeat" (L-bit) to stay alive. This is where your Go skills shine. You’ll use a select statement inside a Goroutine to send a ping every 30 seconds while simultaneously listening for price updates.
